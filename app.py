@@ -1315,9 +1315,6 @@ def submit_complaint():
 # ------------------ MAIN ENTRY ------------------
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
-    app = Flask(__name__)
+    from flask import Flask
 
-# ... aapka baaki code ...
-
-# Code ke bilkul aakhir me yeh line hona zaroori hai:
-app = app.wsgi_app  # ya direct 'app' rehne dein
+app = Flask(__name__) 
